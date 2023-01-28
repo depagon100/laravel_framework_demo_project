@@ -40,11 +40,15 @@
                                      type="email" placeholder="Enter your email" name="email" :value="old('email')" required autofocus />
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 relative">
                         <x-jet-label class="mb-3 block text-xs font-semibold" for="password" value="{{ __('Password') }}" />
                         <x-jet-input id="password" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500"
-                                     type="password" placeholder="********" name="password" required autocomplete="current-password" />
-                    </div>
+                                     type="password" placeholder="Enter your password" name="password" required autocomplete="current-password" />
+
+
+
+                        </div>
+
 
 
                     <x-jet-button class=" mt-3 w-full justify-center transition ease-in-out delay-150 bg-green-800 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ">
