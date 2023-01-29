@@ -23,6 +23,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
+
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
@@ -148,4 +149,19 @@
         });
 
     </script>
+
+    <script type="text/javascript" id="gwt-pst">
+        (function (d, eId) {
+            var js, gjs = d.getElementById(eId);
+            js = d.createElement('script');
+            js.id = 'gwt-pst-jsdk';
+            js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?" + new Date().getTime();
+            gjs.parentNode.insertBefore(js, gjs);
+        }(document, 'pst-container'));
+
+        var gwtpstReady = function () {
+            new gwtpstTime('pst-time');
+        }
+    </script>
+
 </html>

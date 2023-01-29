@@ -1,9 +1,5 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+
 
     <div class="py-12 " >
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -18,7 +14,7 @@
 
                     <!--Title--><div class="m-auto  float-right ">
 
-                        <x-jet-button class=" mb-6 rounded-fulltransition ease-in-out delay-150 bg-indigo-400 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 " >
+                        <x-jet-button class=" mb-6 rounded-fulltransition ease-in-out delay-150 bg-indigo-400 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ">
                             {{ __('Create SMR') }}
                         </x-jet-button>
                     </div>
