@@ -12,7 +12,7 @@
 
 
     <!-- Primary Navigation Menu -->
-    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow drop-shadow-2xl hover:shadow-lg border-t-8 border-blue-600">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -25,7 +25,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" class="text-blue-600 font-semibold text-base">
                         <i class="bi bi-house"></i>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house mr-2"
                              viewBox="0 0 16 16">
@@ -36,14 +36,14 @@
                         </svg> {{ __('Dashboard') }}
                     </x-jet-nav-link>
                     @role('admin')
-                    <x-jet-nav-link href="{{ route('admin.index') }}" :active="request()->routeIs('admin.index')">
+                    <x-jet-nav-link href="{{ route('admin.index') }}" :active="request()->routeIs('admin.index')" class="text-blue-600 font-semibold text-base">
                         {{ __('Admin Dashboard') }}
 
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')">
+                    <x-jet-nav-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')" class="text-blue-600 font-semibold text-base">
                         {{ __('Admin Role') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.permissions.index') }}" :active="request()->routeIs('admin.permissions.index')">
+                    <x-jet-nav-link href="{{ route('admin.permissions.index') }}" :active="request()->routeIs('admin.permissions.index')" class="text-blue-600 font-semibold text-base">
                         {{ __('Admin Permissions') }}
                     </x-jet-nav-link>
                     @endrole
@@ -103,12 +103,12 @@
 
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative ">
+                    <div id="pst-container">
+                        <div id="pst-time" class="m-auto mb-2 relative text-right sm:text-sm"></div>
+                        <div><a href="https://gwhs.i.gov.ph/pst/" id="pst-source"  target="_blank"></a></div>
+                    </div>
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
-                            <div id="pst-container">
-                                <div id="pst-time" class="m-auto relative float-right"></div>
-                                <div><a href="https://gwhs.i.gov.ph/pst/" id="pst-source" target="_blank"></a></div>
-                            </div>
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                                     <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->firstname }}" />
@@ -117,7 +117,7 @@
 
                                 <span class="inline-flex rounded-md">
                                     <p>Logged in as:
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-lg leading-4 font-medium rounded-md text-blue-500 hover:text-blue-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
                                         {{ Auth::user()->firstname }}</p>
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

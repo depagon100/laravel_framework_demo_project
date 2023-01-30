@@ -43,7 +43,9 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::get('/', [IndexController::class, 'index'])->name('index');
     Route::resource('/roles', RoleController::class);
     Route::resource('/permissions', PermissionController::class);
-
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
 
 Route::redirect('/', destination: 'login');
