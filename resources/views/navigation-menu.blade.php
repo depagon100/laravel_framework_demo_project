@@ -135,7 +135,7 @@
                             @role('admin')
 
                             <x-jet-dropdown-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')" >
-                                {{ __('Assign Role') }}
+                                {{ __('Add Role') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('admin.permissions.index') }}" :active="request()->routeIs('admin.permissions.index')">
                                 {{ __('Add Permissions') }}
