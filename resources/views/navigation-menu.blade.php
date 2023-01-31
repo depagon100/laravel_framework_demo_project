@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <div class="container-fluid">
             <span class="navbar-brand mb-0 h-1 mx-auto">
-                <div class="m-auto mt-6 text-primary text-center text-3xl p-1 text-blue-600" >
+                <div class="m-auto mt-8 text-primary text-center text-4xl p-1 text-blue-600 mb-4" >
                        <x-jet-application-mark class="block h-9 w-auto inline-block flex-wrap" />
                     ENVIRONMENTAL MANAGEMENT BUREAU ONLINE SERVICES - SMR
                 </div>
@@ -12,8 +12,8 @@
 
 
     <!-- Primary Navigation Menu -->
-    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow drop-shadow-2xl hover:shadow-lg border-t-8 border-blue-600">
-        <div class="flex justify-between h-16">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow drop-shadow-2xl hover:shadow-lg border-t-8 border-blue-600 mb-4">
+        <div class="flex justify-between h-16 mt-4">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">

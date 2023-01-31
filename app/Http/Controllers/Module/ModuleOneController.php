@@ -63,6 +63,11 @@ class ModuleOneController extends Controller
 
     }
 
+    public function create()
+    {
+        return view('module.moduleOne');
+    }
+
     public function save(Request $request ){
 
         $gic = new Gic();
