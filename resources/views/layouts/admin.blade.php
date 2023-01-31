@@ -236,4 +236,14 @@
                 .responsive.recalc();
         });
     </script>
+    <script>
+        $(document).ready(function() {
+
+            var table = $('#example2').DataTable({
+                responsive: true
+            })
+                .columns.adjust()
+                .responsive.recalc();
+        });
+    </script>
 </html>
