@@ -8,14 +8,14 @@
                 <!--Card-->
                 <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white ">
 
-                    <h1 class=" mr-4  font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
+                    <h1 class=" mr-4 font-sans font-bold break-normal text-indigo-500 px-2 py-2 text-xl md:text-2xl ">
                         SMR LIST
                     </h1>
 
                     <!--Title-->
 
-                        <div class="m-auto flex justify-end p-2">
-                            <a href="{{ route('admin.roles.index') }}" class="px-4 py-2 mb-6 rounded-full transition ease-in-out delay-150 bg-indigo-400 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300">Create SMR</a>
+                        <div class="m-auto flex justify-end p-2 ">
+                            <a href="{{ route('module.moduleOne') }}" class="px-4 py-2 mb-6 rounded-full transition ease-in-out delay-150 bg-indigo-400 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300">Create SMR</a>
                         </div>
 
 
