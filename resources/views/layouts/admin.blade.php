@@ -10,14 +10,9 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
-        <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
@@ -25,10 +20,26 @@
               integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+        <!--Regular Datatables CSS-->
+        <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+        <!--Responsive Extension Datatables CSS-->
+        <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <!--Datatables -->
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+
+        <!-- Scripts -->
+
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -85,7 +96,6 @@
         @livewireScripts
     </body>
     <style>
-
         h1 {
             text-align: left;
             font-size: 26px;
@@ -97,7 +107,100 @@
             font-size: 20px;
             color: gray;
         }
+
+
+        /*Overrides for Tailwind CSS */
+
+        /*Form fields*/
+        .dataTables_wrapper select,
+        .dataTables_wrapper .dataTables_filter input {
+            color: #4a5568;
+            /*text-gray-700*/
+            padding-left: 1rem;
+            /*pl-4*/
+            padding-right: 1rem;
+            /*pl-4*/
+            padding-top: .5rem;
+            /*pl-2*/
+            padding-bottom: .5rem;
+            /*pl-2*/
+            line-height: 1.25;
+            /*leading-tight*/
+            border-width: 2px;
+            /*border-2*/
+            border-radius: .25rem;
+            border-color: #edf2f7;
+            /*border-gray-200*/
+            background-color: #edf2f7;
+            /*bg-gray-200*/
+        }
+
+        /*Row Hover*/
+        table.dataTable.hover tbody tr:hover,
+        table.dataTable.display tbody tr:hover {
+            background-color: #ebf4ff;
+            /*bg-indigo-100*/
+        }
+
+        /*Pagination Buttons*/
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            font-weight: 700;
+            /*font-bold*/
+            border-radius: .25rem;
+            /*rounded*/
+            border: 1px solid transparent;
+            /*border border-transparent*/
+        }
+
+        /*Pagination Buttons - Current selected */
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+            color: #fff !important;
+            /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+            /*shadow*/
+            font-weight: 700;
+            /*font-bold*/
+            border-radius: .25rem;
+            /*rounded*/
+            background: #667eea !important;
+            /*bg-indigo-500*/
+            border: 1px solid transparent;
+            /*border border-transparent*/
+        }
+
+        /*Pagination Buttons - Hover */
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: #fff !important;
+            /*text-white*/
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+            /*shadow*/
+            font-weight: 700;
+            /*font-bold*/
+            border-radius: .25rem;
+            /*rounded*/
+            background: #667eea !important;
+            /*bg-indigo-500*/
+            border: 1px solid transparent;
+            /*border border-transparent*/
+        }
+
+        /*Add padding to bottom border */
+        table.dataTable.no-footer {
+            border-bottom: 1px solid #e2e8f0;
+            /*border-b-1 border-gray-300*/
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
+        }
+
+        /*Change colour of responsive icon*/
+        table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+        table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+            background-color: #667eea !important;
+            /*bg-indigo-500*/
+        }
+
     </style>
+    {{-- Timezone--}}
     <script type="text/javascript" id="gwt-pst">
         (function (d, eId) {
             var js, gjs = d.getElementById(eId);
@@ -110,5 +213,27 @@
         var gwtpstReady = function () {
             new gwtpstTime('pst-time');
         }
+    </script>
+
+    {{-- Sorting, Pagination, Search--}}
+    <script>
+        $(document).ready(function() {
+
+            var table = $('#example').DataTable({
+                responsive: true
+            })
+                .columns.adjust()
+                .responsive.recalc();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            var table = $('#example1').DataTable({
+                responsive: true
+            })
+                .columns.adjust()
+                .responsive.recalc();
+        });
     </script>
 </html>
