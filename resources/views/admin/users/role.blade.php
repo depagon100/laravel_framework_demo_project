@@ -7,7 +7,7 @@
                        class="px-4 py-2 bg-green-700 hover:bg-green-500 text-slate-100 rounded-md">Users Index</a>
                 </div>
                 <div class="flex flex-col p-2 bg-slate-100">
-                    <div>User Name: {{ $user->name }}</div>
+                    <div>User Name: {{ $user->username }}</div>
                     <div>User Email: {{ $user->email }}</div>
                 </div>
                 <div class="mt-6 p-2 bg-slate-100">

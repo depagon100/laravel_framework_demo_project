@@ -141,7 +141,7 @@
                                 {{ __('Add Permissions') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
-                                {{ __('Users') }}
+                                {{ __("Assign User's role and permission") }}
                             </x-jet-dropdown-link>
                             @endrole
 
