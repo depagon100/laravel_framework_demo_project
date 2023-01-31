@@ -40,12 +40,6 @@
                         {{ __('Admin Dashboard') }}
 
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')" class="text-blue-600 font-semibold text-base">
-                        {{ __('Admin Role') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.permissions.index') }}" :active="request()->routeIs('admin.permissions.index')" class="text-blue-600 font-semibold text-base">
-                        {{ __('Admin Permissions') }}
-                    </x-jet-nav-link>
                     @endrole
                 </div>
             </div>
@@ -137,6 +131,17 @@
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
+
+                            @role('admin')
+
+                            <x-jet-dropdown-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')" >
+                                {{ __('Assign Role') }}
+                            </x-jet-dropdown-link>
+                            <x-jet-dropdown-link href="{{ route('admin.permissions.index') }}" :active="request()->routeIs('admin.permissions.index')">
+                                {{ __('Add Permissions') }}
+                            </x-jet-dropdown-link>
+
+                            @endrole
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
