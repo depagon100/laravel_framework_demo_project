@@ -86,6 +86,7 @@
 
 
                     <div id="example_wrapper" class="mb-2 dataTables_wrapper no-footer mr-2">
+
                         <table id="example1" class="stripe hover dataTable no-footer dtr-inline" style="width: 100%; padding-top: 1em; padding-bottom: 1em;" role="grid" aria-describedby="example_info">
                             <thead>
                             <tr role="row">

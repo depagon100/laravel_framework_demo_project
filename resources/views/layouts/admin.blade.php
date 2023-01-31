@@ -110,8 +110,8 @@
         /*Overrides for Tailwind CSS */
 
         /*Form fields*/
-        .dataTables_wrapper select,
-        .dataTables_wrapper .dataTables_filter input {
+        .dataTables_wrapper select
+        {
             color: #4a5568;
             /*text-gray-700*/
             padding-left: 1rem;
@@ -124,14 +124,40 @@
             /*pl-2*/
             line-height: 1.25;
             /*leading-tight*/
-            border-width: 2px;
+            border-width: 4px;
             /*border-2*/
             border-radius: .25rem;
             border-color: #edf2f7;
             /*border-gray-200*/
             background-color: #edf2f7;
             /*bg-gray-200*/
+            width: 45% !important;
+
+
         }
+        .dataTables_wrapper .dataTables_filter input  {
+            color: #4a5568;
+            /*text-gray-700*/
+            padding-left: 1rem;
+            /*pl-4*/
+            padding-right: 1rem;
+            /*pl-4*/
+            padding-top: .5rem;
+            /*pl-2*/
+            padding-bottom: .5rem;
+            /*pl-2*/
+            line-height: 1.25;
+            /*leading-tight*/
+            border-width: 6px;
+            /*border-2*/
+            border-radius: .25rem;
+            border-color: #edf2f7;
+            /*border-gray-200*/
+            background-color: #edf2f7;
+            /*bg-gray-200*/
+            width: 80% !important;
+        }
+
 
         /*Row Hover*/
         table.dataTable.hover tbody tr:hover,
@@ -216,18 +242,48 @@
     {{-- Sorting, Pagination, Search--}}
     <script>
         $(document).ready(function() {
-
             var table = $('#example').DataTable({
+                "scrollCollapse": true,
+                "sScrollY": "500px",
+                "iDisplayLength": 10,
+                "language": {
+                    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+                    "lengthMenu": "_MENU_records per page",
+                    "zeroRecords": "No matching record found",
+                    "emptyTable": "No entries found",
+                    "loadingRecords": "Loading data from server",
+                    "processing": "Processing...",
+                    "search": "Search:",
+                    "info": "Showing page _PAGE_ of _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total entries)"},
+
                 responsive: true
             })
+
                 .columns.adjust()
                 .responsive.recalc();
+
         });
     </script>
     <script>
         $(document).ready(function() {
 
             var table = $('#example1').DataTable({
+                "scrollCollapse": true,
+                "sScrollY": "500px",
+                "iDisplayLength": 10,
+                "language": {
+                    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+                    "lengthMenu": "_MENU_records per page",
+                    "zeroRecords": "No matching record found",
+                    "emptyTable": "No entries found",
+                    "loadingRecords": "Loading data from server",
+                    "processing": "Processing...",
+                    "search": "Search:",
+                    "info": "Showing page _PAGE_ of _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total entries)"},
                 responsive: true
             })
                 .columns.adjust()
@@ -238,6 +294,20 @@
         $(document).ready(function() {
 
             var table = $('#example2').DataTable({
+                "scrollCollapse": true,
+                "sScrollY": "500px",
+                "iDisplayLength": 10,
+                "language": {
+                    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+                    "lengthMenu": "_MENU_records per page",
+                    "zeroRecords": "No matching record found",
+                    "emptyTable": "No entries found",
+                    "loadingRecords": "Loading data from server",
+                    "processing": "Processing...",
+                    "search": "Search:",
+                    "info": "Showing page _PAGE_ of _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total entries)"},
                 responsive: true
             })
                 .columns.adjust()
