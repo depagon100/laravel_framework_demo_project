@@ -58,21 +58,19 @@ Route::redirect('/', destination: 'login');
 
 Route::get('/moduleOne', [ModuleOneController::class, 'index'])->name('module.moduleOne');
 
-Route::get('/saveData', [ModuleOneController::class, 'save']);
-
-Route::post('/saveData', [ModuleOneController::class, 'save']);
+Route::get('/saveData', [ModuleOneController::class, 'save'])->name('module.moduleTwo');
 
 Route::get('/pdf', [ModuleOneController::class, 'pdf']);
 
 /* Module Two Controller */
-Route::get('/moduleTwo', [ModuleTwoController::class, 'index']);
+Route::get('/moduleTwo', [ModuleTwoController::class, 'index'])->name('module.moduleTwo');
 
 Route::get('/saveData2', [ModuleTwoController::class, 'save'])->name('module.moduleTwo');
 
 Route::get('/pdf2', [ModuleTwoController::class, 'pdf']);
 
 /* Module Three Controller */
-Route::get('/moduleThree', [ModuleThreeController::class, 'index']);
+Route::get('/moduleThree', [ModuleThreeController::class, 'index'])->name('module.moduleThree');
 
 Route::get('/saveData3', [ModuleThreeController::class, 'save'])->name('module.moduleThree');
 

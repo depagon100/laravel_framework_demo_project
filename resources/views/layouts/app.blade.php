@@ -516,7 +516,7 @@
     $("#wdladd").click(function () { //button name
         ++i;
         $("#wdl").append(
-            '<tr><td><input class="form-control" type="number" name="dischargeLocation[]"></td><td><input class="form-control" type="text"  id="lo" name="dischargeLocation[]"></td><td><input class="form-control" type="text"  id="nrwb" name="dischargeLocation[]"></td></tr>'
+            '<tr><td class="counterCell " style="text-align: left"></td><td><input class="form-control" type="text"  id="lo" name="dischargeLocation[]" value="{{ old('dischargeLocation[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="nrwb" name="dischargeLocation[]" value="{{ old('dischargeLocation[]', 'N/A') }}"></td></tr>'
         ); //table name
     });
 </script>
@@ -528,8 +528,12 @@
     $("#drwcccadd").click(function () { //button name
         ++i;
         $("#drwccc").append(
-            '<tr><td><input class="form-control" type="text" name="dreportofwaste[]"></td><td><input class="form-control" type="date"  id="wcdate" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="nfr" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="bod" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="tss" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="clr" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="phl" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="oag" name="dreportofwaste[]"></td><td><input class="form-control" type="text"  id="tempr" name="dreportofwaste[]"></td></tr>'
+            '<tr><td><input class="form-control" type="text" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control m-auto" type="date"  id="wcdate" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', '2001-01-01') }}"></td><td><input class="form-control" type="text"  id="nfr" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="bod" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="tss" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="clr" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="phl" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="oag" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text"  id="tempr" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td><td><input class="form-control" type="text" name="dreportofwaste[]" value="{{ old('dreportofwaste[]', 'N/A') }}"></td></tr>'
         ); //table name
+        config = {
+            dateFormat: "Y-m-d"
+        }
+        flatpickr("input[type=date]", config);
     });
 </script>
 
@@ -539,8 +543,12 @@
     $("#dwrcopadd").click(function () { //button name
         ++i;
         $("#dwrcop").append(
-            ' <tr><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="date"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td><td><input class="form-control" type="text"   name="drowcfop1[]"></td></tr>'
+            ' <tr><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="date"   name="drowcfop1[]" value="{{ old('drowcfop1[]', '2001-01-01') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td><td><input class="form-control" type="text"   name="drowcfop1[]" value="{{ old('drowcfop1[]', 'N/A') }}"></td></tr>'
         ); //table name
+        config = {
+            dateFormat: "Y-m-d"
+        }
+        flatpickr("input[type=date]", config);
     });
 </script>
 
