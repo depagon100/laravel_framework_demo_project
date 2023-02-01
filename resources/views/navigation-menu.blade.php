@@ -104,9 +104,9 @@
                 @endif
 
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative ">
+                <div class="ml-3 relative  ">
                     <div id="pst-container">
-                        <div id="pst-time" class="m-auto mb-2 relative text-right sm:text-sm"></div>
+                        <div id="pst-time" class="m-auto mb-2  text-right sm:text-sm"></div>
                         <div><a href="https://gwhs.i.gov.ph/pst/" id="pst-source"  target="_blank"></a></div>
                     </div>
                     <x-jet-dropdown align="right" width="48">

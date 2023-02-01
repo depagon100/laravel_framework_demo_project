@@ -306,12 +306,11 @@
 </script>
 
 <!-- Script for CCo Registration -->
+<!-- Script for CCo Registration -->
 <script type="text/javascript">
-    var i = 0;
-    $("#ccoreg").click(function () { //button name
-        ++i;
+    $("#ccoregister").click(function () { //button name
         $("#cco").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" required>  </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" required>   </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -320,6 +319,8 @@
         flatpickr("input[type=date]", config);
     });
 </script>
+
+
 
 <!-- Scipt for importation clearance no -->
 <script type="text/javascript">

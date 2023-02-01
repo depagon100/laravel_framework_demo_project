@@ -100,8 +100,6 @@
                                         Please select a valid region.
                                     </div>
 
-
-
                                 </div>
 
                                 <div class="col-2">
@@ -169,8 +167,7 @@
                             <!-- Message input class="form-control" -->
                             <div class="container pt-4">
                                 <P class="text-secondary ml-3 mt-3">Please provide the necessary revised, corrected or updated
-                                    information not
-                                    contained in your <br> General Information Sheet.</P>
+                                    information not contained in your <br> General Information Sheet.</P>
                             </div>
 
 
@@ -223,8 +220,7 @@
 
                                 <tbody id="dynamicAddRemove">
                                 <tr>
-                                    <td><button type="button" name="add" id="dynamic-ar"
-                                                class="btn btn-outline-primary">+</button></td>
+                                    <td></td>
                                     <td></td>
                                     <td>DP no.</td>
                                     <td>
@@ -241,13 +237,23 @@
                                         <input class="form-select" placeholder="Date: " value="2001-01-01" type="date" name="dpno[]" id="dpnoe"
                                                required>
                                     </td>
+
                                 </tr>
+
                                 </tbody>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="dynamic-ar"
+                                            class="btn btn-outline-primary">+</button></td>
+                                <td></td>
+                                <td></td>
+
 
                                 <tbody id=pd>
                                 <tr>
-                                    <td><button type="button" name="add" id="ECC" class="btn btn-outline-primary">+</button>
-                                    </td>
+                                    <td></td>
                                     <td>PD 1586</td>
                                     <td>ECC/CNC no.</td>
                                     <td>
@@ -266,6 +272,15 @@
                                     </td>
                                 </tr>
                                 </tbody>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="ECC" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
 
                                 <!-- DENR REG -->
                                 <tbody id="reg">
@@ -339,10 +354,10 @@
                                 </tbody>
 
                                 <!-- CCO Registration -->
-                                <tbody id="cco">
+
+                                <tbody id=cco>
                                 <tr>
-                                    <td><button type="button" name="add" id="ccoreg"
-                                                class="btn btn-outline-primary">+</button></td>
+                                    <td></td>
                                     <td></td>
                                     <td>CCO Registration</td>
                                     <td>
@@ -351,22 +366,29 @@
                                     </td>
                                     <td>
                                         <label for="ccoreg" hidden></label>
-                                        <input class="form-select" placeholder="Date: " value="2001-01-01" type="date" name="ccoreg[]"
-                                               id="ccoreg" required>
+                                        <input class="form-select" placeholder="Date: " value="2001-01-01"
+                                               type="date" name="ccoreg[]" id="ccoreg" required>
                                     </td>
                                     <td>
                                         <label for="ccoreg" hidden></label>
-                                        <input class="form-select" placeholder="Date: " value="2001-01-01" type="date" name="ccoreg[]"
-                                               id="ccoreg" required>
+                                        <input class="form-select" placeholder="Date: " value="2001-01-01"
+                                               type="date" name="ccoreg[]" id="ccoreg" required>
                                     </td>
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="ccoregister" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
                                 <!-- Importation Clearance number -->
                                 <tbody id="importation">
                                 <tr>
-                                    <td><button type="button" name="add" id="imp" class="btn btn-outline-primary">+</button>
-                                    </td>
+                                    <td></td>
                                     <td></td>
                                     <td>Importation Clearance No.</td>
                                     <td>
@@ -386,11 +408,19 @@
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="imp" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
+
                                 <!-- Permit to Transport -->
                                 <tbody id="permit">
                                 <tr>
-                                    <td><button type="button" name="add" id="ptt" class="btn btn-outline-primary">+</button>
-                                    </td>
+                                    <td></td>
                                     <td></td>
                                     <td>Permit to Transport</td>
                                     <td>
@@ -410,11 +440,19 @@
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="ptt" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
+
                                 <!-- Small Quantity Importation -->
                                 <tbody id="smallq">
                                 <tr>
-                                    <td><button type="button" name="add" id="sqi" class="btn btn-outline-primary">+</button>
-                                    </td>
+                                    <td></td>
                                     <td></td>
                                     <td> Small Quantity Importation</td>
                                     <td>
@@ -434,11 +472,18 @@
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="sqi" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
                                 <!-- Priority Chemical list -->
                                 <tbody id="prio">
                                 <tr>
-                                    <td><button type="button" name="add" id="priochem"
-                                                class="btn btn-outline-primary">+</button></td>
+                                    <td></td>
                                     <td></td>
                                     <td>Priority Chemical List</td>
                                     <td>
@@ -458,11 +503,19 @@
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="priochem"
+                                            class="btn btn-outline-primary">+</button></td>
+                                <td></td>
+                                <td></td>
+
+
                                 <!-- PICCS -->
                                 <tbody id="piccs">
                                 <tr>
-                                    <td><button type="button" name="add" id="pccs"
-                                                class="btn btn-outline-primary">+</button></td>
+                                    <td></td>
                                     <td></td>
                                     <td>PICCS</td>
                                     <td>
@@ -482,11 +535,18 @@
                                 </tr>
                                 </tbody>
 
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="pccs"
+                                            class="btn btn-outline-primary">+</button></td>
+                                <td></td>
+                                <td></td>
+
                                 <!-- PMPIN -->
                                 <tbody id="pmpin">
                                 <tr>
-                                    <td><button type="button" name="add" id="pin" class="btn btn-outline-primary">+</button>
-                                    </td>
+                                    <td></td>
                                     <td></td>
                                     <td>PMPIN</td>
                                     <td>
@@ -505,6 +565,15 @@
                                     </td>
                                 </tr>
                                 </tbody>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="pin" class="btn btn-outline-primary">+</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+
 
                                 <!-- ACno2 -->
                                 <tbody>
@@ -533,8 +602,7 @@
                                 <!-- PO no -->
                                 <tbody id="pono">
                                 <tr>
-                                    <td><button type="button" name="add" id="ponum"
-                                                class="btn btn-outline-primary">+</button></td>
+                                    <td></td>
                                     <td></td>
                                     <td>PO No.</td>
                                     <td>
@@ -553,6 +621,14 @@
                                     </td>
                                 </tr>
                                 </tbody>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" name="add" id="ponum"
+                                            class="btn btn-outline-primary">+</button></td>
+                                <td></td>
+                                <td></td>
 
 
                             </table>
