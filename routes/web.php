@@ -10,6 +10,7 @@ use App\Http\Controllers\ModuleOneController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ModuleTwoController;
 use App\Http\Controllers\ModuleThreeController;
+use App\Http\Controllers\ModuleFourController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +76,10 @@ Route::get('/moduleThree', [ModuleThreeController::class, 'index'])->name('modul
 Route::get('/saveData3', [ModuleThreeController::class, 'save'])->name('module.moduleThree');
 
 Route::get('/pdf3', [ModuleThreeController::class, 'pdf']);
+
+/* Module Four Controller */
+Route::get('/moduleFour', [ModuleFourController::class, 'index'])->name('module.moduleFour');
+
+Route::get('/saveData4', [ModuleFourController::class, 'save'])->name('module.moduleFour');
+
+Route::get('/pdf4', [ModuleFourController::class, 'pdf']);

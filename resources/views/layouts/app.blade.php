@@ -551,9 +551,64 @@
         flatpickr("input[type=date]", config);
     });
 </script>
-
-
 {{--Module 3 Script end--}}
 
 
+
+{{--Module 4 script Start--}}
+<!-- SCRIPT FOR SUMMARY OF APSE/APCF 1-->
+<script type="text/javascript">
+    var i = 0;
+    $("#sum1").click(function () { //button name
+        ++i;
+        $("#summaryy1").append
+        ('<tr><td class="counterCell " style="text-align: right" ></td><td><input type="text" class="form-control" name="summary1[]"></td><td><input type="text" class="form-control" name="summary1[]"></td><td><input type="text" class="form-control" name="summary1[]"></td><td></td></tr>'); //table name
+    });
+</script>
+
+
+<!-- SCRIPT FOR SUMMARY OF APSE/APCF 2 -->
+
+<script type="text/javascript">
+    var i = 0;
+    $("#sum2").click(function () { //button name
+        ++i;
+        $("#summaryy2").append
+        ('<tr><td class="counterCell " style="text-align: right" ></td><td ><input type="text" class="form-control" name="summary2[]"></td><td><input type="text" class="form-control" name="summary2[]"></td><td><input type="text" class="form-control" name="summary2[]"></td><td><input type="text" class="form-control" name="summary2[]"></td><td><input type="text" class="form-control" name="summary2[]"></td><td><select class="form-select" name="summary2[]" style="width: fit-content"><option selected disabled value="">-- Select --</option><option>kg</option><option>liter</option><option>m3</option><option>n/a</option><option>pc</option><option>ton</option></select></td><td></td><td></td><td><input type="text" class="form-control" name="summary2[]"></td></tr>'); //table name
+    });
+</script>
+
+<!-- SCRIPT FOR SUMMARY OF APSE/APCF 3-->
+
+<script type="text/javascript">
+    var i = 0;
+    $("#sum3").click(function () { //button name
+        ++i;
+        $("#summaryy3").append
+        ('<tr><td class="counterCell " style="text-align: right" ></td><td><input type="text" class="form-control" name="summary3[]"></td><td><input type="text" class="form-control" name="summary3[]"></td><td><input type="text" class="form-control" name="summary3[]"></td><td></td> </tr>'); //table name
+    });
+</script>
+
+<!-- SCRIPT FOR RECORD COST OF TREATMENT-->
+
+<script type="text/javascript">
+    var i = 0;
+    $("#rcotb").click(function () { //button name
+        ++i;
+        $("#rcot").append
+        ('<div class="container" id="rcot"><div class="card border-3 border-secondary mb-3" ><table class="w3-table w3-striped w3-border"><thead><tr><th></th><th style="text-align:center">Month 1</th><th style="text-align:center">Month 2</th><th style="text-align:center">Month 3</th></tr></thead><tbody><tr><td>Cost of Person employed, (# of employess)</td><td><input type="text" class="form-control" name="COPEMonth1"></td><td><input type="text" class="form-control" name="COPEMonth2"></td><td><input type="text" class="form-control" name="COPEMonth3"></td></tr><tr><td>Total Consumption of Water (cubic meters)</td><td><input type="text" class="form-control" name="TCOWMonth1"></td><td><input type="text" class="form-control" name="TCOWMonth2"></td><td><input type="text" class="form-control" name="TCOWMonth3"></td></tr><tr><td>Total Cost of Chemicals used (e.g., activated carbon, KMnO4)</td><td><input type="text" class="form-control" name="TCOCMonth1"></td><td><input type="text" class="form-control" name="TCOCMonth2"></td><td><input type="text" class="form-control" name="TCOCMonth3"></td></tr><tr><td>Total Consumption of Electricity (kWh)</td><td><input type="text" class="form-control" name="TCOEMonth1"></td><td><input type="text" class="form-control" name="TCOEMonth2"></td><td><input type="text" class="form-control" name="TCOEMonth3"></td></tr><tr><td>Administrative and Overhead Costs</td><td><input type="text" class="form-control" name="AAOCMonth1"></td><td><input type="text" class="form-control" name="AAOCMonth2"></td><td><input type="text" class="form-control" name="AAOCMonth3"></td></tr><tr><td>Cost of operating in-house laboratory</td><td><input type="text" class="form-control" name="COPIHLMonth1"></td><td><input type="text" class="form-control" name="COPIHLMonth2"></td><td><input type="text" class="form-control" name="COPIHLMonth3"></td></tr><tr><td>improvement or modification, if any. (description)</td><td><input type="text" class="form-control" name="IOMMonth1"></td><td><input type="text" class="form-control" name="IOMMonth2"></td><td><input type="text" class="form-control" name="IOMMonth3"></td></tr><tr><td>Cost of improvement of modification</td><td><input type="text" class="form-control" name="COIOMonth1"></td><td><input type="text" class="form-control" name="COIOMonth2"></td><td><input type="text" class="form-control" name="COIOMonth3"></td></tr></tbody></table></div></div>'); //table name
+    });
+</script>
+
+<!-- SCRIPT FOR DETAILED REPORT OF AIR EMISSION CHARACTERISTICS-->
+
+<script type="text/javascript">
+    var i = 0;
+    $("#droaecb").click(function () { //button name
+        ++i;
+        $("#droaec").append
+        ('<tr><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="date" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name="detailreport[]"></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>'); //table name
+    });
+</script>
+{{--Module 4 script end--}}
 </html>
