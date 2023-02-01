@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModuleOneController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ModuleTwoController;
+use App\Http\Controllers\ModuleThreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,4 +55,25 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
 });
 
 Route::redirect('/', destination: 'login');
-Route::get('/moduleOne', [ModuleOneController::class, 'index']);
+
+Route::get('/moduleOne', [ModuleOneController::class, 'index'])->name('module.moduleOne');
+
+Route::get('/saveData', [ModuleOneController::class, 'save']);
+
+Route::post('/saveData', [ModuleOneController::class, 'save']);
+
+Route::get('/pdf', [ModuleOneController::class, 'pdf']);
+
+/* Module Two Controller */
+Route::get('/moduleTwo', [ModuleTwoController::class, 'index']);
+
+Route::get('/saveData2', [ModuleTwoController::class, 'save'])->name('module.moduleTwo');
+
+Route::get('/pdf2', [ModuleTwoController::class, 'pdf']);
+
+/* Module Three Controller */
+Route::get('/moduleThree', [ModuleThreeController::class, 'index']);
+
+Route::get('/saveData3', [ModuleThreeController::class, 'save'])->name('module.moduleThree');
+
+Route::get('/pdf3', [ModuleThreeController::class, 'pdf']);

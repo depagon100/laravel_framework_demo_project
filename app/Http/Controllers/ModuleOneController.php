@@ -263,7 +263,7 @@ class ModuleOneController extends Controller
 
             };
         }
-        return redirect('moduleTwo');
+        return redirect('module.moduleTwo');
 
 
     }
@@ -279,7 +279,7 @@ class ModuleOneController extends Controller
 
 
 
-        return redirect('moduleOne');
+        return redirect('module.moduleOne');
     }
 
     public function pdf(){
