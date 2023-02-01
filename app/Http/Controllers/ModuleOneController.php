@@ -28,6 +28,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PDF;
+use Illuminate\Support\Carbon;
 
 class ModuleOneController extends Controller
 {
@@ -311,5 +312,41 @@ class ModuleOneController extends Controller
         return $pdf->download('moduleOne.pdf1');
     }
 
+    public function store(Request $request)
+    {
+        $dateIssued = $request->input('date_issued');
+        $expiryDate = $request->input('expiry_date');
+
+        if (empty($dateIssued)) {
+            $dateIssued = Carbon::parse('2001-01-01');
+        } else {
+            $dateIssued = Carbon::createFromFormat('Y-m-d', $dateIssued);
+        }
+
+        if (empty($expiryDate)) {
+            $expiryDate = null;
+        } else {
+            $expiryDate = Carbon::createFromFormat('Y-m-d', $expiryDate);
+        }
+
+        // Add a limit of 30 days after the date issued
+        $limitDate = $dateIssued->copy()->addDays();
+
+        if ($expiryDate && $expiryDate->gt($limitDate)) {
+            return back()->withErrors(['expiry_date' => 'Expiry date cannot go beyond 30 days after the date issued']);
+        }
+
+        if ($dateIssued->gt($expiryDate)) {
+            return back()->withErrors(['date_issued' => 'Date issued cannot go beyond the expiry date']);
+        }
+
+        // Save to the database
+        $item = new Item;
+        $item->date_issued = $dateIssued;
+        $item->expiry_date = $expiryDate;
+        $item->save();
+
+        return redirect()->route('module.moduleOne');
+    }
 
 }

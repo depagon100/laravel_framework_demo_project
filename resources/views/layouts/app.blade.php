@@ -281,7 +281,7 @@
 <script type="text/javascript">
     $("#dynamic-ar").click(function () { //button name
         $("#dynamicAddRemove").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="dpno" hidden></label> <input class="form-control" type="text" name="dpno[]" id="" required>  </td> <td> <label for="dpno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="dpno[]" id="dpno" required> </td> <td> <label for="dpno"  hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="dpno[]" id="dpnoe" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="dpno" hidden></label> <input class="form-control" type="text" name="dpno[]" id="dpno" value="{{ old('dpno', 'N/A') }}" required>  </td> <td> <label for="dpno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="dpno[]" id="dpno" required> </td> <td> <label for="dpno"  hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="dpno[]" id="dpnoe" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -295,7 +295,7 @@
 <script type="text/javascript">
     $("#ECC").click(function () { //button name
         $("#pd").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="cncno" hidden></label> <input class="form-control" type="text" name="cncno[]" id="cncno" required>   </td> <td> <label for="cncno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="cncno[]" id="cncno" required> </td> <td> <label for="cncno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="cncno[]" id="cncno" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="cncno" hidden></label> <input class="form-control" type="text" name="cncno[]" id="cncno" value="{{ old('cncno', 'N/A') }}" required>   </td> <td> <label for="cncno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="cncno[]" id="cncno" required> </td> <td> <label for="cncno" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="cncno[]" id="cncno" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -306,11 +306,10 @@
 </script>
 
 <!-- Script for CCo Registration -->
-<!-- Script for CCo Registration -->
 <script type="text/javascript">
     $("#ccoregister").click(function () { //button name
         $("#cco").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" required>   </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" value="{{ old('ccoreg', 'N/A') }}" required>   </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -328,7 +327,7 @@
     $("#imp").click(function () { //button name
         ++i;
         $("#importation").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="import" hidden></label> <input class="form-control" type="text" name="import[]" id="import" required>   </td> <td> <label for="import" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="import[]" id="import" required> </td> <td> <label for="import" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="import[]" id="import" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="import" hidden></label> <input class="form-control" type="text" name="import[]" id="import" value="{{ old('import', 'N/A') }}" required>   </td> <td> <label for="import" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="import[]" id="import" required> </td> <td> <label for="import" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="import[]" id="import" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -345,7 +344,7 @@
     $("#ptt").click(function () { //button name
         ++i;
         $("#permit").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="permit" hidden></label> <input class="form-control" type="text" name="permit[]" id="" required>  </td> <td> <label for="permit" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="permit[]" id="" required> </td> <td> <label for="permit" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="permit[]" id="" required> </td>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="permit" hidden></label> <input class="form-control" type="text" name="permit[]" id="permit" value="{{ old('permit', 'N/A') }}" required>  </td> <td> <label for="permit" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="permit[]" id="" required> </td> <td> <label for="permit" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="permit[]" id="" required> </td>'
         ); //table name
 
         config = {
@@ -361,7 +360,7 @@
     $("#sqi").click(function () { //button name
         ++i;
         $("#smallq").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="smallquan" hidden></label> <input class="form-control" type="text" name="smallquan[]" id="smallquan" required>  </td> <td> <label for="smallquan" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="smallquan[]" id="smallquan" required> </td> <td> <label for="smallquan" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="smallquan[]" id="smallquan" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="smallquan" hidden></label> <input class="form-control" type="text" name="smallquan[]" id="smallquan" value="{{ old('smallquan', 'N/A') }}" required>  </td> <td> <label for="smallquan" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="smallquan[]" id="smallquan" required> </td> <td> <label for="smallquan" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="smallquan[]" id="smallquan" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -378,7 +377,7 @@
     $("#priochem").click(function () { //button name
         ++i;
         $("#prio").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="priority" hidden></label> <input class="form-control" type="text" name="priority[]" id="priority" required>  </td> <td> <label for="priority" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="priority[]" id="priority" required> </td> <td> <label for="priority" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="priority[]" id="priority" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="priority" hidden></label> <input class="form-control" type="text" name="priority[]" id="priority" value="{{ old('priority', 'N/A') }}" required>  </td> <td> <label for="priority" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="priority[]" id="priority" required> </td> <td> <label for="priority" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="priority[]" id="priority" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -394,7 +393,7 @@
     $("#pccs").click(function () { //button name
         ++i;
         $("#piccs").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="piccs" hidden></label> <input class="form-control" type="text" name="piccs[]" id="piccs" required>  </td> <td> <label for="piccs" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="piccs[]" id="piccs" required> </td> <td> <label for="piccs" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="piccs[]" id="piccs" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="piccs" hidden></label> <input class="form-control" type="text" name="piccs[]" id="piccs" value="{{ old('piccs', 'N/A') }}" required>  </td> <td> <label for="piccs" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="piccs[]" id="piccs" required> </td> <td> <label for="piccs" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="piccs[]" id="piccs" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -408,7 +407,7 @@
 <script type="text/javascript">
     $("#pin").click(function () { //button name
         $("#pmpin").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="pmpin" hidden></label> <input class="form-control" type="text" name="pmpin[]" id="pmpin" required>  </td> <td> <label for="pmpin" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pmpin[]" id="pmpin" required> </td> <td> <label for="pmpin" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pmpin[]" id="pmpin" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="pmpin" hidden></label> <input class="form-control" type="text" name="pmpin[]" id="pmpin" value="{{ old('pmpin', 'N/A') }}" required>  </td> <td> <label for="pmpin" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pmpin[]" id="pmpin" required> </td> <td> <label for="pmpin" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pmpin[]" id="pmpin" required> </td> </tr>'
         ); //table name
 
         config = {
@@ -424,7 +423,7 @@
     $("#ponum").click(function () { //button name
         ++i;
         $("#pono").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="pono" hidden></label> <input class="form-control" type="text" name="pono[]" id="pono" required>  </td> <td> <label for="pono" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pono[]" id="pono" required> </td> <td> <label for="pono" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pono[]" id="pono" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="pono" hidden></label> <input class="form-control" type="text" name="pono[]" id="pono" value="{{ old('pono', 'N/A') }}" required>  </td> <td> <label for="pono" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pono[]" id="pono" required> </td> <td> <label for="pono" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="pono[]" id="pono" value="{{old('pono')}}" required> </td> </tr>'
         ); //table name
         config = {
             dateFormat: "Y-m-d"

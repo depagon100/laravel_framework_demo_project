@@ -201,7 +201,7 @@
 
                                     <td>
                                         <label for="ACPermit" hidden></label>
-                                        <input class="form-control" type="text" name="ACPermit" id="ACPermit" required>
+                                        <input class="form-control" type="text" name="ACPermit" id="ACPermit" value="{{ old('ACPermit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="ACIssued" hidden></label>
@@ -225,7 +225,7 @@
                                     <td>DP no.</td>
                                     <td>
                                         <label for="dpno" hidden></label>
-                                        <input class="form-control" type="text" name="dpno[]" id="" required>
+                                        <input class="form-control" type="text" name="dpno[]" id="dpno" value="{{ old('dpno', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="dpno" hidden></label>
@@ -258,7 +258,7 @@
                                     <td>ECC/CNC no.</td>
                                     <td>
                                         <label for="cncno" hidden></label>
-                                        <input class="form-control" type="text" name="cncno[]" id="cncno" required>
+                                        <input class="form-control" type="text" name="cncno[]" id="cncno" value="{{ old('cncno', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="cncno" hidden></label>
@@ -290,7 +290,7 @@
                                     <td>DENR Registry ID</td>
                                     <td>
                                         <label for="DENRpermit" hidden></label>
-                                        <input class="form-control" type="text" name="DENRpermit" id="DENRpermit" required>
+                                        <input class="form-control" type="text" name="DENRpermit" id="DENRpermit" value="{{ old('DENRpermit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="DENRdateIssued" hidden></label>
@@ -315,7 +315,7 @@
                                     <td>
                                         <label for="Transportpermit" hidden></label>
                                         <input class="form-control" type="text" name="Transportpermit" id="Transportpermit"
-                                               required>
+                                               value="{{ old('Transportpermit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="TransportdateIssued" hidden></label>
@@ -338,7 +338,7 @@
                                     <td>TSD Registration</td>
                                     <td>
                                         <label for="TSDpermit" hidden></label>
-                                        <input class="form-control" type="text" name="TSDpermit" id="TSDpermit" required>
+                                        <input class="form-control" type="text" name="TSDpermit" id="TSDpermit" value="{{ old('TSDpermit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="TSDdateIssued" hidden></label>
@@ -362,7 +362,7 @@
                                     <td>CCO Registration</td>
                                     <td>
                                         <label for="ccoreg" hidden></label>
-                                        <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" required>
+                                        <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" value="{{ old('ccoreg', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="ccoreg" hidden></label>
@@ -393,7 +393,7 @@
                                     <td>Importation Clearance No.</td>
                                     <td>
                                         <label for="import" hidden></label>
-                                        <input class="form-control" type="text" name="import[]" id="import" required>
+                                        <input class="form-control" type="text" name="import[]" id="import" value="{{ old('import', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="import" hidden></label>
@@ -425,7 +425,7 @@
                                     <td>Permit to Transport</td>
                                     <td>
                                         <label for="permit" hidden></label>
-                                        <input class="form-control" type="text" name="permit[]" id="" required>
+                                        <input class="form-control" type="text" name="permit[]" id="permit" value="{{ old('permit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="permit" hidden></label>
@@ -457,7 +457,7 @@
                                     <td> Small Quantity Importation</td>
                                     <td>
                                         <label for="smallquan" hidden></label>
-                                        <input class="form-control" type="text" name="smallquan[]" id="smallquan" required>
+                                        <input class="form-control" type="text" name="smallquan[]" id="smallquan" value="{{ old('smallquan', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="smallquan" hidden></label>
@@ -488,7 +488,7 @@
                                     <td>Priority Chemical List</td>
                                     <td>
                                         <label for="priority" hidden></label>
-                                        <input class="form-control" type="text" name="priority[]" id="priority" required>
+                                        <input class="form-control" type="text" name="priority[]" id="priority" value="{{ old('priority', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="priority" hidden></label>
@@ -520,7 +520,7 @@
                                     <td>PICCS</td>
                                     <td>
                                         <label for="piccs" hidden></label>
-                                        <input class="form-control" type="text" name="piccs[]" id="piccs" required>
+                                        <input class="form-control" type="text" name="piccs[]" id="piccs" value="{{ old('piccs', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="piccs" hidden></label>
@@ -551,7 +551,7 @@
                                     <td>PMPIN</td>
                                     <td>
                                         <label for="pmpin" hidden></label>
-                                        <input class="form-control" type="text" name="pmpin[]" id="pmpin" required>
+                                        <input class="form-control" type="text" name="pmpin[]" id="pmpin" value="{{ old('pmpin', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="pmpin" hidden></label>
@@ -583,7 +583,7 @@
                                     <td>A/C no.</td>
                                     <td>
                                         <label for="ACNOPermit" hidden></label>
-                                        <input class="form-control" type="text" name="ACNOPermit" id="ACNOPermit" required>
+                                        <input class="form-control" type="text" name="ACNOPermit" id="ACNOPermit" value="{{ old('ACNOPermit', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="ACNOIssued" hidden></label>
@@ -607,7 +607,7 @@
                                     <td>PO No.</td>
                                     <td>
                                         <label for="pono" hidden></label>
-                                        <input class="form-control" type="text" name="pono[]" id="pono" required>
+                                        <input class="form-control" type="text" name="pono[]" id="pono" value="{{ old('pono', 'N/A') }}" required>
                                     </td>
                                     <td>
                                         <label for="pono" hidden></label>
@@ -654,18 +654,18 @@
                                     <td></td>
                                     <td>
                                         <label for="aveOPhours" hidden></label>
-                                        <input class="form-control" type="text" name="aveOPhours" value="10" id="aveOPhours"
-                                               required>
+                                        <input class="form-control" type="text" name="aveOPhours" value=" " id="aveOPhours"
+                                               value="{{old('aveOPhours')}}" required>
                                     </td>
                                     <td>
                                         <label for="aveOPdays" hidden></label>
-                                        <input class="form-control" type="text" name="aveOPdays" value="5" id="aveOPdays"
-                                               required>
+                                        <input class="form-control" type="text" name="aveOPdays" value=" " id="aveOPdays"
+                                               value="{{old('aveOPdays')}}" required>
                                     </td>
                                     <td>
                                         <label for="aveOPshift" hidden></label>
-                                        <input class="form-control" type="text" name="aveOPshift" value="1" id="aveOPshift"
-                                               required>
+                                        <input class="form-control" type="text" name="aveOPshift" value=" " id="aveOPshift"
+                                               value="{{old('aveOPshift')}}" required>
                                     </td>
 
                                 </tr>
@@ -677,15 +677,15 @@
                                     <td></td>
                                     <td>
                                         <label for="maxOPhours" hidden></label>
-                                        <input class="form-control" type="text" name="maxOPhours" id="maxOPhours" required>
+                                        <input class="form-control" type="text" name="maxOPhours" id="maxOPhours" value="{{old('maxOPhours')}}" required>
                                     </td>
                                     <td>
                                         <label for="maxOPdays" hidden></label>
-                                        <input class="form-control" type="text" name="maxOPdays" id="maxOPdays" required>
+                                        <input class="form-control" type="text" name="maxOPdays" id="maxOPdays" value="{{old('maxOPdays')}}" required>
                                     </td>
                                     <td>
                                         <label for="maxOPshift" hidden></label>
-                                        <input class="form-control" type="text" name="maxOPshift" id="maxOPshift" required>
+                                        <input class="form-control" type="text" name="maxOPshift" id="maxOPshift" value="{{old('maxOPshift')}}" required>
                                     </td>
 
                                 </tr>
@@ -703,13 +703,13 @@
                                     <td>
                                         <label for="aveProduction" hidden></label>
                                         <input class="form-control" type="text" name="aveProduction" id="aveProduction"
-                                               required>
+                                               value="{{old('aveProduction')}}" required>
                                     </td>
                                     <td>Total Output This Quarter</td>
                                     <td>
                                         <label for="totalOutput" hidden></label>
                                         <input class="form-control" type="text" name="totalOutput" id="totalOutput"
-                                               required>
+                                               value="{{old('totalOutput')}}" required>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -720,13 +720,13 @@
                                     <td>
                                         <label for="totalConsumption" hidden></label>
                                         <input class="form-control" type="text" name="totalConsumption"
-                                               id="totalConsumption" required>
+                                               id="totalConsumption" value="{{old('totalConsumption')}}" required>
                                     </td>
                                     <td>Total Electric Consumption this Quarter (kwh)</td>
                                     <td>
                                         <label for="totalElectric" hidden></label>
                                         <input class="form-control" type="text" name="totalElectric" id="totalElectric"
-                                               required>
+                                               value="{{old('totalElectric')}}" required>
                                     </td>
 
                                 </tr>
