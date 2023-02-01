@@ -48,15 +48,17 @@
                     </div>
 
 
-                        <div class="card col-5" style="float:right" >
-                                <div class="mt-1 mx-3">
-                                    Reference no.
-                                </div>
+                    <div class="card col-5 mr-4" style="float:right">
 
-                                <div class="card-body">
-                                    <input type="text" class="form-control mt-0" placeholder="">
-                                </div>
-                            </div>
+                        <div class="mt-1 mx-3">
+                            Reference no.
+                        </div>
+
+                        <div class="card-body">
+                            <input type="text" class="form-control mt-0" placeholder="" readonly>
+                        </div>
+
+                    </div>
                         </div>
 
 
