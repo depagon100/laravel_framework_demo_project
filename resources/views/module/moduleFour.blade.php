@@ -23,16 +23,18 @@
 
     <title>Environmental Management Bureau Online Services - SMR - RA 8749 (AIR POLLUTION)</title>
 
-    <div class="py-12">
+    <div class="py-12 ">
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div>
-                {{View::make('module.tabs')}}</div>
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-auto">
 
 
-                    <div class="container mt-auto" style="align-content: center">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+                {{View::make('module.tabs')}}
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+
+
+
+                    <div class="container col ml-4 mt-4" style="align-content: center">
                         {{--     <!--Delete FORM -->
                    <form method ="post" action="/deleteData">
                      @csrf
@@ -329,7 +331,7 @@
                                         <div class="col mb-3" >
                                             <div style="float: right" class="mb-3">
                                                 <a href="{{ route('module.moduleThree') }}" class="btn btn-lg border bg-light">Previous</a>
-                                                {{-- <a href="{{ route('module.moduleFour') }}" class="btn btn-lg btn-info">Next</a>--}}
+                                                 <a href="{{ route('module.moduleFive') }}" class="btn btn-lg btn-info">Next</a>
                                                 <input type="submit" value="Save Page" class="btn btn-lg btn-primary">
                                             </div>
                                         </div>

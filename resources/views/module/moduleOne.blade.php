@@ -36,13 +36,15 @@
 
     <title>Environmental Management Bureau Online Services - SMR - General information</title>
 
-    <div class="py-12">
+    <div class="py-12 ">
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-           <div>
-            {{View::make('module.tabs')}}</div>
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+
+
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+                {{View::make('module.tabs')}}
+
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
 
@@ -195,7 +197,7 @@
                                 <tbody>
                                 <tr>
                                     <td></td>
-                                    <td>RA 6969</td>
+                                    <td>RA 9275</td>
                                     <td>A/C</td>
                                     <input class="form-control" type="number" name="traineeID" value="1" hidden>
 
@@ -818,11 +820,9 @@
 
 <!-- Script for CCo Registration -->
 <script type="text/javascript">
-    var i = 0;
-    $("#ccoreg").click(function () { //button name
-        ++i;
+    $("#ccoregister").click(function () { //button name
         $("#cco").append(
-            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" required>  </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
+            '<tr> <td></td> <td></td> <td></td> <td> <label for="ccoreg" hidden></label> <input class="form-control" type="text" name="ccoreg[]" id="ccoreg" value="{{ old('ccoreg', 'N/A') }}" required>   </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> <td> <label for="ccoreg" hidden></label> <input class="form-select" placeholder="Date: " value="2001-01-01"  type="date" name="ccoreg[]" id="ccoreg" required> </td> </tr>'
         ); //table name
 
         config = {
