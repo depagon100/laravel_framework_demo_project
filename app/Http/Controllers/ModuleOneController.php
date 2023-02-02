@@ -264,7 +264,7 @@ class ModuleOneController extends Controller
 
             };
         }
-        return redirect('module.moduleTwo');
+        return redirect('moduleTwo');
 
 
     }
@@ -346,7 +346,7 @@ class ModuleOneController extends Controller
         $item->expiry_date = $expiryDate;
         $item->save();
 
-        return redirect()->route('module.moduleOne');
+        return redirect()->route('moduleTwo');
     }
 
 }

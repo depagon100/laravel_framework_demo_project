@@ -195,7 +195,7 @@ class ModuleThreeController extends Controller
         }
 
 
-        return redirect('/module.moduleThree');
+        return redirect('moduleThree');
 
 }
         public function pdf(){

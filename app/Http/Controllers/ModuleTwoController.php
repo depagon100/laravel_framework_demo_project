@@ -110,7 +110,7 @@ class ModuleTwoController extends Controller
                 }
 
 
-            return view('module.moduleThree');
+            return view('moduleThree');
     }
 
     public function pdf (){

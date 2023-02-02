@@ -24,10 +24,7 @@ class RolesAndPermissionsSeeder extends Seeder
         Permission::create(['name' => 'delete']);
 
         // this can be done by chaining
-        $role = Role::create(['name' => 'trainee']);
-        $role->givePermissionTo('create', 'read', 'update');
 
-        $role = Role::create(['name' => 'super-admin']);
-        $role->givePermissionTo(Permission::all());
+
     }
 }

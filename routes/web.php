@@ -57,29 +57,30 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
 
 Route::redirect('/', destination: 'login');
 
+/* Module one Controller */
 Route::get('/moduleOne', [ModuleOneController::class, 'index'])->name('module.moduleOne');
 
-Route::get('/saveData', [ModuleOneController::class, 'save'])->name('module.moduleTwo');
+Route::post('/saveData', [ModuleOneController::class, 'save']);
 
 Route::get('/pdf', [ModuleOneController::class, 'pdf']);
 
 /* Module Two Controller */
 Route::get('/moduleTwo', [ModuleTwoController::class, 'index'])->name('module.moduleTwo');
 
-Route::get('/saveData2', [ModuleTwoController::class, 'save'])->name('module.moduleTwo');
+Route::get('/saveData2', [ModuleTwoController::class, 'save']);
 
 Route::get('/pdf2', [ModuleTwoController::class, 'pdf']);
 
 /* Module Three Controller */
 Route::get('/moduleThree', [ModuleThreeController::class, 'index'])->name('module.moduleThree');
 
-Route::get('/saveData3', [ModuleThreeController::class, 'save'])->name('module.moduleThree');
+Route::get('/saveData3', [ModuleThreeController::class, 'save']);
 
 Route::get('/pdf3', [ModuleThreeController::class, 'pdf']);
 
 /* Module Four Controller */
 Route::get('/moduleFour', [ModuleFourController::class, 'index'])->name('module.moduleFour');
 
-Route::get('/saveData4', [ModuleFourController::class, 'save'])->name('module.moduleFour');
+Route::get('/saveData4', [ModuleFourController::class, 'save']);
 
 Route::get('/pdf4', [ModuleFourController::class, 'pdf']);
