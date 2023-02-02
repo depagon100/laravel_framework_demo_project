@@ -692,4 +692,32 @@
     });
 </script>
 {{--Module 5 Script end--}}
+
+
+{{--Module 6 Script start--}}
+
+<!-- Script for ACCIDENTS & EMERGENCY RECORDS -->
+<script type="text/javascript">
+    var i = 0;
+    $("#AERT").click(function () { //button name
+        ++i;
+        $("#AER").append
+        (' <tr><td><input type="date" class="form-control" name="accident_records[]"></td><td><input type="text" class="form-control" name="accident_records[]"></td><td><input type="text" class="form-control" name="accident_records[]"></td><td><input type="text" class="form-control" name="accident_records[]"></td><td><input type="text" class="form-control" name="accident_records[]"></td></tr>'); //table name
+    });
+</script>
+
+
+<!--  Script for ACCIDENTS & Personel Staff RECORDS -->
+<script type="text/javascript">
+    var i = 0;
+    $("#PersonelStaff").click(function () { //button name
+        ++i;
+        $("#PST").append
+        (' <tr><td><input type="date" class="form-control" name="personel_staff[]"></td><td><input type="text" class="form-control" name="personel_staff[]"></td><td><input type="text" class="form-control" name="personel_staff[]"></td></tr>'); //table name
+    });
+</script>
+
+{{--Module 6 Script end--}}
+
+
 </html>
