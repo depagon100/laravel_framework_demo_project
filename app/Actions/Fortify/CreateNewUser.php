@@ -73,4 +73,9 @@ class CreateNewUser implements CreatesNewUsers
             'personal_team' => true,
         ]));
     }
+
+
+
 }
+
+

@@ -10,6 +10,7 @@ use App\Models\Cncno;
 use App\Models\Denrid;
 use App\Models\Dpno;
 use App\Models\Gic;
+use App\Models\referenceno;
 
 use App\Models\Import;
 use App\Models\Operation;
@@ -27,6 +28,7 @@ use App\Models\Upload;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Jetstream\Jetstream;
 use PDF;
 use Illuminate\Support\Carbon;
 
@@ -56,10 +58,13 @@ class ModuleOneController extends Controller
         $trainee_id = TraineeID::all();
         $upload = Upload::all();
 
+
         return view('module.moduleOne')
             ->with(['aircon'=>$aircon,'dpno'=>$dpno,'gic'=>$gic, 'acno'=> $acno,'dpno'=>$dpno,'cncno'=>$cncno,'denrid'=>$denrid,
                 'transporterReg'=>$transporterReg,'tsdreg'=>$tsdreg,'ccoreg'=>$ccoreg,'import'=>$import,'permit'=>$permit,'smallquan'=>$smallquan,
-                'priority'=>$priority,'piccs'=>$piccs,'pmpin'=>$pmpin,'pono'=>$pono,'operation'=>$operation,'production'=>$production,'traineeid'=>$trainee_id,'uploads'=>$upload
+                'priority'=>$priority,'piccs'=>$piccs,'pmpin'=>$pmpin,'pono'=>$pono,'operation'=>$operation,'production'=>$production,'traineeid'=>$trainee_id,'uploads'=>$upload,
+
+
             ]);
 
     }
@@ -70,6 +75,8 @@ class ModuleOneController extends Controller
     }
 
     public function save(Request $request ){
+        $dateIssued = $request->input('date_issued');
+        $expiryDate = $request->input('expiry_date');
 
         $gic = new Gic();
         $gic->username = Auth::user()->username;
@@ -80,8 +87,8 @@ class ModuleOneController extends Controller
         $aircon->username = Auth::user()->username;
         $aircon->traineeID = $request->input('traineeID');
         $aircon->permit = $request->input('ACPermit');
-        $aircon->dateIssued = $request->input('ACIssued');
-        $aircon->dateExpired = $request->input('ACExpire');
+        $aircon->$dateIssued = $request->input('ACIssued');
+        $aircon->$expiryDate = $request->input('ACExpire');
         $aircon->save();
 
 
@@ -262,25 +269,38 @@ class ModuleOneController extends Controller
                 $upload->file = $name;
                 $upload->save();
 
+
             };
+
         }
         return redirect('moduleTwo');
 
 
     }
 
-    public function generate(){
+    public static function generate(){
 
         $trainee_id = Helper::IDGenerator(new TraineeID, 'traineeID', 5 , 'DENR');
 
         $data = new TraineeID;
         $data->traineeID = $trainee_id;
-
+        $data->name = Auth::user()->firstname;
+        $data->username = Auth::user()->username;
         $data->save();
 
 
 
-        return redirect('module.moduleOne');
+        return redirect('moduleOne');
+    }
+
+    public function show($traineeID)
+    {  $data =new TraineeID;
+    $data->username = Auth::user()->username;
+    $reference_no = TraineeID::where('username', Auth::user()->username)->value('traineeID');
+
+
+
+        return view('show', compact('reference_no'));
     }
 
     public function pdf(){

@@ -70,7 +70,8 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <input type="text" class="form-control mt-0" placeholder="" readonly>
+
+                                    <input type="text" class="form-control mt-0" placeholder="" name="reference_no" value="{{ $reference_no }}" readonly>
                                 </div>
 
                             </div>
@@ -83,7 +84,7 @@
 
                                 <div class="col-2">
                                     <label for="validationCustom04" hidden></label>
-                                    <select class="form-select" id="validationCustom04" required>
+                                    <select class="form-select" id="validationCustom04" name="validationCustom04" required>
                                         <option selected disabled value="">SELECT</option>
                                         <option class="">2025</option>
                                         <option class="">2024</option>

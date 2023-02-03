@@ -41,7 +41,7 @@
 
                 <div class="container col ml-4 mt-4" style="align-content: center">
 
-                    <form action="/saveData6" post="post">
+                    <form action="/saveData6" post="post" enctype="multipart/form-data">
                         @csrf
                         <!-- {{ csrf_field() }} -->
                         <br>
@@ -62,7 +62,7 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <input type="text" class="form-control mt-0" placeholder="" readonly>
+                                    <input type="text" class="form-control mt-0" placeholder="" name="reference_no" value="{{ $reference_no }}" readonly>
                                 </div>
 
                             </div>
@@ -180,12 +180,12 @@
 
                                 <div class="row" style="text-align: center; ">
                                     <input type="text" style="width: 350px; margin-left: 11%;" >
-                                    <p style="margin-left:-26%;" >Name/ Signature of CEO/ Managing Head</p>
+                                    <p style="margin-left:-22.5%;" >Name/ Signature of CEO/ Managing Head</p>
                                 </div>
 
                                 <div class="row mt-5">
                                     <div class="col">
-                                        <p class="text-center">SUBSCRIBED AND SWORN before me, a Notary Public, this <input type="text"> day of <input type="date"> , affiants exhibiting to me their IDs :</p>
+                                        <p class="text-center text-sm font-medium">SUBSCRIBED AND SWORN before me, a Notary Public, this <input type="text"> day of <input type="date">  , affiants exhibiting to me their IDs:</p>
                                     </div>
                                 </div>
 
