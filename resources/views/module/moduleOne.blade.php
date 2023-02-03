@@ -70,8 +70,9 @@
                                 </div>
 
                                 <div class="card-body">
-
-                                    <input type="text" class="form-control mt-0" placeholder="" name="reference_no" value="{{ $reference_no }}" readonly>
+                                    @if($traineeid->where('username', Auth::user()->username)->first())
+                                    <input type="text" class="form-control mt-0" placeholder=""  value="{{ $traineeid->where('username', Auth::user()->username)->first()->traineeID }}" readonly >
+                                    @endif
                                 </div>
 
                             </div>
