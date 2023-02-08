@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('priority', function (Blueprint $table) {
             $table->id();
-            $table->integer('traineeID');
             $table->string('username');
             $table->string('permit');
             $table->date('dateIssued');

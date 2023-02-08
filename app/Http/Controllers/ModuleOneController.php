@@ -21,7 +21,7 @@ use App\Models\Pono;
 use App\Models\Priority;
 use App\Models\Production;
 use App\Models\Smallquan;
-use App\Models\TraineeID;
+use App\Models\referencen;
 use App\Models\TransporterReg;
 use App\Models\Tsdreg;
 use App\Models\Upload;
@@ -55,14 +55,14 @@ class ModuleOneController extends Controller
         $pono = Pono::all();
         $operation = Operation::all();
         $production = Production::all();
-        $trainee_id = TraineeID::all();
+        $reference_no = referencen::all();
         $upload = Upload::all();
 
 
         return view('module.moduleOne')
             ->with(['aircon'=>$aircon,'dpno'=>$dpno,'gic'=>$gic, 'acno'=> $acno,'dpno'=>$dpno,'cncno'=>$cncno,'denrid'=>$denrid,
                 'transporterReg'=>$transporterReg,'tsdreg'=>$tsdreg,'ccoreg'=>$ccoreg,'import'=>$import,'permit'=>$permit,'smallquan'=>$smallquan,
-                'priority'=>$priority,'piccs'=>$piccs,'pmpin'=>$pmpin,'pono'=>$pono,'operation'=>$operation,'production'=>$production,'traineeid'=>$trainee_id,'uploads'=>$upload,
+                'priority'=>$priority,'piccs'=>$piccs,'pmpin'=>$pmpin,'pono'=>$pono,'operation'=>$operation,'production'=>$production,'referencens'=>$reference_no,'uploads'=>$upload,
 
 
             ]);
@@ -85,7 +85,6 @@ class ModuleOneController extends Controller
 
         $aircon  = new Aircon();
         $aircon->username = Auth::user()->username;
-        $aircon->traineeID = $request->input('traineeID');
         $aircon->permit = $request->input('ACPermit');
         $aircon->$dateIssued = $request->input('ACIssued');
         $aircon->$expiryDate = $request->input('ACExpire');
@@ -94,7 +93,6 @@ class ModuleOneController extends Controller
 
         $denrid  = new Denrid();
         $denrid->username = Auth::user()->username;
-        $denrid->traineeID = $request->input('traineeID');
         $denrid->permit = $request->input('DENRpermit');
         $denrid->dateIssued = $request->input('DENRdateIssued');
         $denrid->dateExpired = $request->input('DENRdateExpired');
@@ -102,7 +100,6 @@ class ModuleOneController extends Controller
 
         $transporterReg  = new TransporterReg();
         $transporterReg->username = Auth::user()->username;
-        $transporterReg->traineeID = $request->input('traineeID');
         $transporterReg->permit = $request->input('Transportpermit');
         $transporterReg->dateIssued = $request->input('TransportdateIssued');
         $transporterReg->dateExpired = $request->input('TransportdateExpired');
@@ -110,7 +107,6 @@ class ModuleOneController extends Controller
 
         $tsdreg  = new Tsdreg();
         $tsdreg->username = Auth::user()->username;
-        $tsdreg->traineeID = $request->input('traineeID');
         $tsdreg->permit = $request->input('TSDpermit');
         $tsdreg->dateIssued = $request->input('TSDdateIssued');
         $tsdreg->dateExpired = $request->input('TSDdateExpired');
@@ -118,7 +114,6 @@ class ModuleOneController extends Controller
 
         $acno  = new Acno();
         $acno->username = Auth::user()->username;
-        $acno->traineeID = $request->input('traineeID');
         $acno->permit = $request->input('ACNOPermit');
         $acno->dateIssued = $request->input('ACNOIssued');
         $acno->dateExpired = $request->input('ACNOExpired');
@@ -126,7 +121,6 @@ class ModuleOneController extends Controller
 
         $operation  = new Operation();
         $operation->username = Auth::user()->username;
-        $operation->traineeID = $request->input('traineeID');
         $operation->aveOPhours = $request->input('aveOPhours');
         $operation->aveOPdays = $request->input('aveOPdays');
         $operation->aveOPshift = $request->input('aveOPshift');
@@ -147,7 +141,6 @@ class ModuleOneController extends Controller
         $dpno = $request->input('dpno');
         for ($x=0; $x<count($dpno); $x+=3){
             $DBdpno = new Dpno();
-            $DBdpno->traineeID = 1;
             $DBdpno->username = Auth::user()->username;
             $DBdpno->permit = $dpno[$x];
             $DBdpno->dateIssued = $dpno[$x+1];
@@ -171,7 +164,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($ccoreg); $x+=3){
             $DBccoreg = new Ccoreg();
             $DBccoreg->username = Auth::user()->username;
-            $DBccoreg->traineeID = 1;
             $DBccoreg->permit = $ccoreg[$x];
             $DBccoreg->dateIssued = $ccoreg[$x+1];
             $DBccoreg->dateExpired = $ccoreg[$x+2];
@@ -183,7 +175,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($import); $x+=3){
             $DBimport = new Import();
             $DBimport->username = Auth::user()->username;
-            $DBimport->traineeID = 1;
             $DBimport->permit = $import[$x];
             $DBimport->dateIssued = $import[$x+1];
             $DBimport->dateExpired = $import[$x+2];
@@ -194,7 +185,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($permit); $x+=3){
             $DBpermit = new Permmit();
             $DBpermit->username = Auth::user()->username;
-            $DBpermit->traineeID = 1;
             $DBpermit->permit = $permit[$x];
             $DBpermit->dateIssued = $permit[$x+1];
             $DBpermit->dateExpired = $permit[$x+2];
@@ -206,7 +196,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($permit); $x+=3){
             $DBsmallquan = new Smallquan();
             $DBsmallquan->username = Auth::user()->username;
-            $DBsmallquan->traineeID = 1;
             $DBsmallquan->permit = $smallquan[$x];
             $DBsmallquan->dateIssued = $smallquan[$x+1];
             $DBsmallquan->dateExpired = $smallquan[$x+2];
@@ -217,7 +206,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($priority); $x+=3){
             $DBpriority = new Priority();
             $DBpriority->username = Auth::user()->username;
-            $DBpriority->traineeID = 1;
             $DBpriority->permit = $priority[$x];
             $DBpriority->dateIssued = $priority[$x+1];
             $DBpriority->dateExpired = $priority[$x+2];
@@ -229,7 +217,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($piccs); $x+=3){
             $DBpiccs = new Piccs();
             $DBpiccs->username = Auth::user()->username;
-            $DBpiccs->traineeID = 1;
             $DBpiccs->permit = $piccs[$x];
             $DBpiccs->dateIssued = $piccs[$x+1];
             $DBpiccs->dateExpired = $piccs[$x+2];
@@ -241,7 +228,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($pmpin); $x+=3){
             $DBpmpin = new Pmpin();
             $DBpmpin->username = Auth::user()->username;
-            $DBpmpin->traineeID = 1;
             $DBpmpin->permit = $pmpin[$x];
             $DBpmpin->dateIssued = $pmpin[$x+1];
             $DBpmpin->dateExpired = $pmpin[$x+2];
@@ -253,7 +239,6 @@ class ModuleOneController extends Controller
         for ($x=0; $x<count($pono); $x+=3){
             $DBpono = new Pono();
             $DBpono->username = Auth::user()->username;
-            $DBpono->traineeID = 1;
             $DBpono->permit = $pono[$x];
             $DBpono->dateIssued = $pono[$x+1];
             $DBpono->dateExpired = $pono[$x+2];
@@ -280,19 +265,20 @@ class ModuleOneController extends Controller
 
     public static function generate(){
 
-        $trainee_id = Helper::IDGenerator(new TraineeID, 'traineeID', 5 , 'DENR');
+        $existing_referencen = \App\Models\referencen::where('username', Auth::user()->username)->first();
 
-        $data = new TraineeID;
-        $data->traineeID = $trainee_id;
-        $data->name = Auth::user()->firstname;
-        $data->username = Auth::user()->username;
-        $data->save();
-
-
+        if ($existing_referencen) {
+            $reference_no = $existing_referencen->ref_no;
+        } else {
+            $reference_no = Helper::IDGenerator(new referencen, 'ref_no', 5 , 'DENR');
+            $data = new referencen;
+            $data->ref_no = $reference_no;
+            $data->username = Auth::user()->username;
+            $data->save();
+        }
 
         return redirect('moduleOne');
     }
-
     public function show($traineeID)
     {  $data =new TraineeID;
     $data->username = Auth::user()->username;

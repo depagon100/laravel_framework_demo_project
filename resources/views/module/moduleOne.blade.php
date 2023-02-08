@@ -70,8 +70,9 @@
                                 </div>
 
                                 <div class="card-body">
-                                    @if($traineeid->where('username', Auth::user()->username)->first())
-                                    <input type="text" class="form-control mt-0" placeholder=""  value="{{ $traineeid->where('username', Auth::user()->username)->first()->traineeID }}" readonly >
+
+                                    @if(\App\Models\referencen::where('username', Auth::user()->username)->first())
+                                    <input type="text" class="form-control mt-0" placeholder=""  value="{{ \App\Models\referencen::where('username', Auth::user()->username)->first()->ref_no }}" readonly >
                                     @endif
                                 </div>
 
@@ -201,8 +202,6 @@
                                     <td></td>
                                     <td>RA 9275</td>
                                     <td>A/C</td>
-                                    <input class="form-control" type="number" name="traineeID" value="1" hidden>
-
                                     <td>
                                         <label for="ACPermit" hidden></label>
                                         <input class="form-control" type="text" name="ACPermit" id="ACPermit" value="{{ old('ACPermit', 'N/A') }}" required>

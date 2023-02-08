@@ -89,12 +89,10 @@
                                     <tbody>
                                     <tr>
                                         <td>Domestic wastewater (cubicmeters/day)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" style="text-align:center" name="domwaste" id="dww" value="{{ old('domwaste', 'N/A') }}"></td>
 
                                         <td></td>
                                         <td>Processs wastewater (cubicmeters/day)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" style="text-align:center" name="processwaste" id="pww" value="{{ old('processwaste', 'N/A') }}"></td>
                                     </tr>
                                     </tbody>
@@ -102,12 +100,10 @@
                                     <tbody>
                                     <tr>
                                         <td>Cooling water (cubicmeters/day)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" style="text-align:center" name="coolingw" id="cwmd" value="{{ old('coolingw', 'N/A') }}"></td>
 
                                         <td>
                                         <td class="grid-rows-1 grid-cols-2"><label for="othern">Others</label>
-                                            <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                             <input class="form-control inline" type="text" style="text-align:center" name="othern" id="otn" value="{{ old('othern', 'N/A') }}"></td>
                                         <td> <label for="othercm">(cubicmeters/day)</label>
                                             <input class="form-control" type="text" style="text-align:center" name="othercm" id="ocmd" value="{{ old('othercm', 'N/A') }}"></td>
@@ -118,12 +114,10 @@
                                     <tbody>
                                     <tr>
                                         <td>Waste water, equipment (cubicmeters/day)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" style="text-align:center" name="wequip" id="wweq" value="{{ old('wequip', 'N/A') }}"></td>
 
                                         <td></td>
                                         <td>Waste water, floor (cubicmeters/day)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" style="text-align:center" name="wwfloor" id="wwfl" value="{{ old('wwfloor', 'N/A') }}"></td>
 
                                     </tr>
@@ -148,7 +142,6 @@
                                     <tbody id="penum">
                                     <tr>
                                         <td>Person employed, (# of employees)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="pemonth1" id="pem1" value="{{ old('pemonth1', 'N/A') }}"></td>
                                         <td><input class="form-control"type="text" name="pemonth2" id="pem2" value="{{ old('pemonth2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="pemonth3" id="pem3" value="{{ old('pemonth3', 'N/A') }}"></td>
@@ -159,7 +152,6 @@
                                     <tbody id="pecost">
                                     <tr>
                                         <td>Person employed, (cost)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="pecmonth1" id="pecm1" value="{{ old('pecmonth1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="pecmonth2" id="pecm2" value="{{ old('pecmonth2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="pecmonth3" id="pecm3" value="{{ old('pecmonth3', 'N/A') }}"></td>
@@ -169,7 +161,6 @@
                                     <tbody id="cocwtp">
                                     <tr>
                                         <td>Cost of Chemicals used by WTP</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="cocw1" id="cocwm1" value="{{ old('cocwm1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="cocw2" id="cocwm2" value="{{ old('cocwm2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="cocw3" id="cocwm3" value="{{ old('cocwm3', 'N/A') }}"></td>
@@ -179,7 +170,6 @@
                                     <tbody id="ucwtp">
                                     <tr>
                                         <td>Utility Costs of WTP(electricity & water)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="ucw1" id="ucwm1" value="{{ old('ucwm1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="ucw2" id="ucwm2" value="{{ old('ucwm2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="ucw3" id="ucwm3" value="{{ old('ucwm3', 'N/A') }}"></td>
@@ -189,7 +179,6 @@
                                     <tbody id="aoc">
                                     <tr>
                                         <td>Administrative and Overhead Costs</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="aoc1" id="aocm1" value="{{ old('aocm1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="aoc2" id="aocm2" value="{{ old('aocm2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="aoc3" id="aocm3" value="{{ old('aocm3', 'N/A') }}"></td>
@@ -199,7 +188,6 @@
                                     <tbody id="colab">
                                     <tr>
                                         <td>Cost of operating in-house laboratory</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="colab1" id="colabm1" value="{{ old('colabm1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="colab2" id="colabm2" value="{{ old('colabm2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="colab3" id="colabm3" value="{{ old('colabm3', 'N/A') }}"></td>
@@ -209,7 +197,6 @@
                                     <tbody id="nai">
                                     <tr>
                                         <td>New/Additional Investments in WTP <br> (description)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="nai1" id="naim1" value="{{ old('naim1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="nai2" id="naim2" value="{{ old('naim2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="nai3" id="naim3" value="{{ old('naim3', 'N/A') }}"></td>
@@ -220,7 +207,6 @@
                                     <tbody id="cnai">
                                     <tr>
                                         <td>Costs of New/Add Investments <br> (description)</td>
-                                        <input class="form-control" type="number" name="traineeID" value="1" hidden>
                                         <td><input class="form-control" type="text" name="cnai1" id="cnaim1" value="{{ old('cnaim1', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="cnai2" id="cnaim2" value="{{ old('cnaim2', 'N/A') }}"></td>
                                         <td><input class="form-control" type="text" name="cnai3" id="cnaim3" value="{{ old('cnaim3', 'N/A') }}"></td>

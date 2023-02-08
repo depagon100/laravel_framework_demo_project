@@ -34,7 +34,6 @@ class ModuleTwoController extends Controller
         $hwGeneration = $request->input('hwGeneration');
         for ($x=0; $x<count($hwGeneration); $x+=8 ){
             $DBhwGeneration = new HwGeneration();
-            $DBhwGeneration->traineeID = 1;
             $DBhwGeneration->username = Auth::user()->username;
             $DBhwGeneration->Hwno = $hwGeneration[$x];
             $DBhwGeneration->HWclass = $hwGeneration[$x+1];

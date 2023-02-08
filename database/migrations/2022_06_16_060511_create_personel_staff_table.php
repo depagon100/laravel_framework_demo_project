@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('personel_staff', function (Blueprint $table) {
             $table->id();
-            $table->integer('traineeID');
             $table->date('date');
             $table->string('Course_Training_Description');
             $table->string('no_of_Personnel_Trained');

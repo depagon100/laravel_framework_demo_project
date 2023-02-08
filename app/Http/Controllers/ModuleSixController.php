@@ -24,7 +24,6 @@ class ModuleSixController extends Controller
         $accident_records = $request->input('accident_records');
         for ($x=0; $x<count($accident_records); $x+=5 ){
             $DBaccident_records = new AccidentRecord();
-            $DBaccident_records->traineeID = 1;
             $DBaccident_records->date = $accident_records[$x];
             $DBaccident_records->Area_Location = $accident_records[$x+1];
             $DBaccident_records->Findings_and_Obeservations = $accident_records[$x+2];
@@ -37,7 +36,6 @@ class ModuleSixController extends Controller
         $personel_staff = $request->input('personel_staff');
         for ($x=0; $x<count($personel_staff); $x+=3 ){
             $DBpersonel_staff = new PersonelStaff();
-            $DBpersonel_staff->traineeID = 1;
             $DBpersonel_staff->date = $personel_staff[$x];
             $DBpersonel_staff->Course_Training_Description = $personel_staff[$x+1];
             $DBpersonel_staff->no_of_Personnel_Trained = $personel_staff[$x+2];

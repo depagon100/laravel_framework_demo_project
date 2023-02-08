@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('accident_records', function (Blueprint $table) {
             $table->id();
-            $table->integer('traineeID');
             $table->date('date');
             $table->string('Area_Location');
             $table->string('Findings_and_Obeservations');

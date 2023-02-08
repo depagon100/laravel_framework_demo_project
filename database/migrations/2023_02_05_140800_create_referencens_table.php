@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('referencenos', function (Blueprint $table) {
+        Schema::create('referencens', function (Blueprint $table) {
             $table->id();
-            $table->string('reference_no');
-            $table->string('username');
+            $table->string('ref_no');
+            $table->string('username')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('referencenos');
+        Schema::dropIfExists('referencens');
     }
 };
