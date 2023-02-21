@@ -9,6 +9,7 @@
 
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
 
+
                 <div class="container">
 
                     <h3 class="text-success">FACILITY</h3>
@@ -85,7 +86,6 @@
 
 
                 </div>
-
 
 
             </div>
